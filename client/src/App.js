@@ -7,6 +7,7 @@ import Navbar from "./components/navbar";
 import Newnav  from './components/newnav';
 import Operations from "./components/operations";
 import Transfer from "./components/transfer";
+import Transac from "./components/transactions";
 
 function App() {
 
@@ -33,6 +34,7 @@ function App() {
             <Routes>
               <Route exact path="/" element={<Operations key="operations" />}/>
               <Route exact path="/transfer" element={<Transfer key="transfer" />}/>
+              <Route exact path="/transac" element={<Transac key="transac" />}/>
             </Routes>
           </div>
       </Router>

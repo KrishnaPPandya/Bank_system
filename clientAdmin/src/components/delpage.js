@@ -44,7 +44,7 @@ export const Delpage = () => {
                     data.map((item) => {
                         return (
                             <li key={item.email} onClick = {() => handleDelete(item._id)} className="list-group-item">
-                                <p>{item.blogContent}</p>
+                                <p>{item.email --- item.name}</p>
                             </li>
                         );
                     })
