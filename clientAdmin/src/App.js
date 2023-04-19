@@ -2,12 +2,10 @@ import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import  Login  from "./components/login";
-import Signup  from "./components/signup";
 import Navbar from "./components/navbar";
 import Newnav  from './components/newnav';
-import Operations from "./components/operations";
-import Transfer from "./components/transfer";
-import Transaction from "./components/transaction";
+import Home from "./components/home";
+import Delpage from "./components/delpage";
 
 function App() {
 
@@ -19,10 +17,9 @@ function App() {
             <div className="App">
               <Routes>
                 <Route exact path="/" element={<Login key="login" />}/>
-                <Route exact path="/signup" element={<Signup key="signup" />}/>
               </Routes>
             </div>
-        </Router> 
+        </Router>
       </>
     );
   }else{
@@ -32,10 +29,8 @@ function App() {
         <Newnav/>
           <div className="App">
             <Routes>
-              <Route exact path="/" element={<Operations key="operations" />}/>
-              <Route exact path="/transfer" element={<Transfer key="transfer" />}/>
-              <Route exact path="/transaction" element={<Transaction key="transaction" />}/>
-
+              <Route exact path="/" element={<Home key="home" />}/>
+              <Route exact path="/delusers" element={<Delpage key="delpage" />}/>
             </Routes>
           </div>
       </Router>

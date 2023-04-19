@@ -22,37 +22,45 @@ export const Login = () => {
         // })
         
         // const j = await response.json();
-        const senddata = {
+        // const senddata = {
             
-            email: email,
-            password: password
+        //     email: email,
+        //     password: password
+        // }
+
+        if (email === "admin@bank.com" && password === "12345")
+        {
+            localStorage.setItem('token', true);
+            localStorage.setItem('email', email);
+            navigate(`/`);
         }
-        axios.post('login.php',senddata).then((result)=>{
-            console.log(result.data);
-            const key = "valid";
-            const  compare = key.localeCompare(result.data);
-            console.log(compare);
-            if(result.data === "valid")
-            {
+        else
+        {
+            console.log("here");
+            alert('Invalid User');
+        }
+
+        // axios.post('login.php',senddata).then((result)=>{
+        //     console.log(result.data);
+        //     const key = "valid";
+        //     const  compare = key.localeCompare(result.data);
+        //     console.log(compare);
+        //     if(result.data === "valid")
+        //     {
       
-                localStorage.setItem('token', true);
-                localStorage.setItem('email', email)
-                navigate(`/`);
-                
+        //         localStorage.setItem('token', true);
+        //         localStorage.setItem('email', email)
+        //         navigate(`/`);
 
-
-            }   
-            else
-            {
-                console.log("here");
-                alert('Invalid User');
-            }
-        })
+        //     }   
+        //     else
+        //     {
+        //         console.log("here");
+        //         alert('Invalid User');
+        //     }
+        // })
         
         // console.log(j.success);
-
-          
-
     }
 
     return(

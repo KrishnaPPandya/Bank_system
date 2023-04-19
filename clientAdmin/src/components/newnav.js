@@ -19,10 +19,8 @@ const Newnav = ()=> {
           </button>
           <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div className="navbar-nav">
-              <a className="nav-item nav-link active" href="/">Operations<span className="sr-only">(current)</span></a>
-              <a className="nav-item nav-link" href="/transfer">Transfer</a>
-              <a className="nav-item nav-link" href="/transaction">Transaction</a>
-
+              <a className="nav-item nav-link active" href="/">Home<span className="sr-only">(current)</span></a>
+              <a className="nav-item nav-link" href="/delusers">Delete users</a>
               <button className="nav-item nav-link" onClick={handleClick}>Log Out</button>
             </div>
           </div>
